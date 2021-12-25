@@ -8,7 +8,7 @@ RUN apt-get install -y \
 
 RUN pip3 install pyTelegramBotApi
 COPY images images
-COPY source.py source.py
+COP source.py source.py
 
 CMD ["python3", "source.py"]
  
