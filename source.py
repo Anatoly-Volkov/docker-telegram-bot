@@ -1,17 +1,10 @@
+#!/bin/bash/python3
 import telebot
+import os
 from telebot import types
 from random import randint as rnd
 
-
-f_r = open(".env", "r")
-variables = dict()
-text = f_r.readlines()
-for line in text:
-	arr = line.rstrip().split('=')
-	variables[arr[0]] = arr[1]
-
-f_r.close()
-token = variables['token']
+token = os.getenv('TOKEN')
 
 bot = telebot.TeleBot(token)
 
